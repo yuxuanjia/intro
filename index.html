@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Department of Science Theatre - Introduction</title>
+  <style>
+    :root { --blue: #002147; }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5 url('texture.png') repeat;
+      background-size: 300px 300px;
+      color: #333;
+      line-height: 1.6;
+    }
+    header { background: var(--blue); color: white; padding: 10px 20px; display: flex; align-items: center; }
+    header img { height: 50px; margin-right: 20px; }
+    header div { text-align: left; }
+    header h1 { margin: 0; font-size: 1.8em; }
+    header p { margin: 5px 0 0; font-size: 1em; }
+    nav { background: #e0e0e0; padding: 10px 20px; text-align: center; }
+    nav a {
+      margin: 0 10px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      color: var(--blue);
+      border-bottom: 2px solid var(--blue);
+    }
+    section { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; }
+    h2 { color: var(--blue); margin-top: 0; }
+    .project { border: 1px solid #ccc; margin-bottom: 15px; border-radius: 8px; overflow: hidden; }
+    .project-header {
+      background: #f0f0f0;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .project-header:hover {
+      background: #e0e0e0;
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .project-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+      padding: 0 15px;
+    }
+    .project-content.show {
+      max-height: 1000px; /* sufficient max height */
+      opacity: 1;
+      padding: 15px;
+    }
+    .project-content img {
+      margin-bottom: 20px;
+    }
+    .placeholder-img { width: 100%; height: 200px; background: #ccc; display: flex; align-items: center; justify-content: center; color: #555; margin-bottom: 10px; }
+    footer { text-align: center; padding: 20px; font-size: 0.8em; color: #666; margin-top: 20px; }
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .about-text {
+      flex: 1 1 60%;
+    }
+    .about-image {
+      flex: 1 1 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="2.jpg" alt="Science Theatre Logo">
+  <div>
+    <h1>The Department of Science Theatre</h1>
+    <p>The Central Academy of Drama, Beijing, China</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#lab">Key Laboratory</a>
+  <a href="#programs">Programs</a>
+  <a href="#research">Research</a>
+  <a href="#projects">Projects</a>
+  <a href="#facilities">Facilities</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About the Department</h2>
+      <p>The Department of Science Theatre was founded on June 6, 2023, as one of the fruitful results of a CAD’s project, Key Laboratory of Intelligent Dramatic Art Space, Ministry of Education. It centers around ‘digital drama’, the science-based sub-discipline initiated by the CAD. Building on the essence of theatre, it stresses interdisciplinary research and education. It has been established in the light of China’s strategic plan to develop cultural digitalization, with the aim to nurture interdisciplinary generalists that can integrate cultural technology with theatre, film and TV arts, and can live up to China’s strategic plans.</p>
+
+      <p>The Department is responsible for the construction and operation of Key Laboratory of Intelligent Dramatic Art Space. It works with national and international experts for innovation, to carry out the major missions commissioned by the authorities at state, provincial, and industrial levels.</p>
+
+      <p>The Department manages the Institute for Advanced Research of Digitalization of Traditional Chinese Theatre, an entity platform for scientific and technological innovation sponsored by the program of Outstanding Young Scientists in Beijing Colleges and Universities.</p>
+    </div>
+    <div class="about-image">
+      <img src="1.png" alt="Department Overview Image">
+    </div>
+  </div>
+</section>
+
+<section id="lab">
+  <h2>Intelligent Dramatic Art Space</h2>
+  <h3>Key Laboratory of the Ministry of Education</h3>
+  <p>
+    The Key Laboratory of Intelligent Dramatic Art Space, Ministry of Education, is the first national key laboratory in the field of performing arts in China. Led by The Central Academy of Drama, it was officially launched in March 2023.
+  </p>
+  <p>
+    The Laboratory focuses on the integration of digital technologies and dramatic arts, promoting the intelligent and digital transformation of stage performance. Its principal research areas include Digital Human Creation and Virtual Performance, Motion Capture and Data Analysis, Human-Computer Interaction and Spatial Computing, Digital Preservation and Re-creation of Traditional Theatre, and AI-driven Applications in Theatre Creation and Performance.
+  </p>
+  <p>
+    Actively fostering collaborations with academic institutions, research centres, and industry leaders both nationally and internationally, the Laboratory is dedicated to advancing interdisciplinary innovation and contributing to the global development of intelligent performing arts spaces.
+  </p>
+</section>
+
+<section id="programs">
+  <h2>Programmes of Study</h2>
+  <p>The Department of Digital Theatre offers a comprehensive academic structure comprising undergraduate programmes in Performance in Digital Space and Screen Acting, as well as a graduate programme with research pathways in The Digitalisation of Theatre, Digitalisation of Traditional Theatre, and Theatre and Artificial Intelligence. The curriculum is rooted both in the traditions of theatrical performance and in cutting-edge technological innovation, incorporating modules such as Digital Human Generation, Motion Capture Data Analysis, Applications of Human-Computer Interaction Technologies, and Digital Theatre Creation. Students are rigorously trained in classical performance techniques—including voice, movement, stagecraft, and characterisation—while also developing competencies in modern scientific methods and artificial intelligence. Equal emphasis is placed on live and digital performance, preparing students to meet the demands of both stage and screen. Through an interdisciplinary and globally engaged approach, the Department is committed to advancing the digital transformation of the performing arts.</p>
+</section>
+
+<section id="research">
+  <h2>Research Themes</h2>
+  <ul>
+    <li><strong>Digital Human Creation and Virtual Performance</strong><br>Exploring digital avatar generation and their applications in immersive theatrical environments.</li>
+    <li><strong>Motion Capture and Data Analysis</strong><br>Applying motion capture technologies to study and innovate performance dynamics.</li>
+    <li><strong>Human-Computer Interaction and Spatial Computing</strong><br>Integrating interactive technologies and spatial analysis into digital theatre spaces.</li>
+    <li><strong>Digital Preservation and Re-creation of Traditional Theatre</strong><br>Safeguarding and revitalizing heritage theatrical forms through digital means.</li>
+    <li><strong>AI Applications in Theatre Creation and Performance</strong><br>Utilizing artificial intelligence to enhance the processes of theatrical storytelling and performance design.</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Major Projects and Achievements</h2>
+
+  <div class="project">
+    <div class="project-header" onclick="toggleContent(this)">Digital Mei Lanfang Project</div>
+    <div class="project-content">
+      <img src="3.png" alt="Digital Mei Lanfang Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+      <p>Jointly developed by The Central Academy of Drama and Beijing Institute of Technology, the “Digital Mei Lanfang” project pioneers a standardized approach to the digital recreation of historical figures. Through advanced real-time technologies, it faithfully reconstructs Mei Lanfang’s appearance, movement, voice, and performance, creating China’s first truly interactive “digital twin” of a Peking Opera master. The project sets a benchmark for the preservation and digital asset management of Chinese cultural figures.</p>
+      <video controls style="width: 70%; height: auto; border-radius: 8px; display: block; margin: 20px auto;">
+        <source src="mei.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header" onclick="toggleContent(this)">Rescue and Digital Preservation of Endangered Traditional Theatre Techniques</div>
+    <div class="project-content">
+      <img src="4.png" alt="Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+      <p>The Central Academy of Drama has pioneered the integration of motion capture, facial capture, and machine learning technologies for the digital preservation and transmission of traditional Chinese theatre. By applying motion capture, generative adversarial networks, and interdisciplinary research methods, the project systematically collects and reconstructs the endangered techniques of Peking Opera, Kunqu Opera, and other forms. It extracts master-level stylistic features to build a “cultural genome” database of representative artists, supporting the development of intelligent, interactive learning systems and offering a human-machine collaborative solution for high-level heritage preservation.</p>
+      <img src="5.jpg" alt="Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+       <p>Building on high-precision 3D body movement data capture and analysis, the project develops an interactive learning system designed for the transmission of traditional Chinese theatre arts. By enabling dynamic human–machine interaction, the system supports the preservation, teaching, and innovation of critical performance techniques, offering a new paradigm for the sustainable inheritance of traditional theatre at a high artistic level.</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header" onclick="toggleContent(this)">The Shape of Time – Peking Opera</div>
+    <div class="project-content">
+        <img src="6.png" alt="Image" style="width: 50%; border-radius: 8px; display: block; margin: 20px auto;">
+        <p>“The Shape of Time – Peking Opera” explores the representation of time through dynamic imagery combined with motion capture data. Rather than simply visualizing the movement of renowned Peking Opera performers, the project materializes and solidifies the traces of performers’ gestures across the dimensions of time and space, creating dynamic “gesture-time sculptures” that embody both motion and texture.</p>
+        <img src="7.png" alt="Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+        
+        <p>The work was unveiled during “China Night” at the 58th Venice Biennale in May 2019 and was also exhibited at the 2019 Asian Digital Art Exhibition, a supporting event of the Conference on Dialogue of Asian Civilizations. By innovatively digitizing traditional theatrical expression, it celebrates the richness of Chinese heritage and attracted significant media attention, with over 200,000 visitors both online and offline.</p>
+        <p>This project marks an important exploration of transforming traditional Peking Opera into the realm of visual and spatial art, integrating it into a global artistic language.</p>
+    <div class="placeholder-img">Video Coming Soon...</div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header" onclick="toggleContent(this)">Rhyme of Ice and Snow</div>
+    <div class="project-content">
+      <img src="8.png" alt="Rhyme of Ice and Snow Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+      <p>The project team provided the Data Sculpture digital art installation for the Beijing Winter Olympics. Rhyme of Ice and Snow (RIS) presents a transparent three-dimensional display space constructed with staggered LED screens. Leveraging 3DAT technology, it abstractly transforms the motion trajectories of winter athletes into dynamic visuals resembling Chinese ink painting and snow particles, creating a sculptural effect rich in movement and texture. Artificial intelligence technologies were further employed to sense audience presence, applause, and cheers, enabling real-time interaction between the dynamic imagery and the viewers. This work exemplifies an innovative convergence of sports data, traditional aesthetics, and interactive digital art.</p>
+      <video controls style="width: 70%; height: auto; border-radius: 8px; display: block; margin: 20px auto;">
+        <source src="冰雪之韵.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header" onclick="toggleContent(this)">Lady of An Guo</div>
+    <div class="project-content">
+      <img src="9.png" alt="Lady of An Guo Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+      <p>Lady of An Guo is the first Peking Opera film in China to be entirely produced using advanced LED virtual production technology. Integrating real-time rendering, spatial tracking, digital lighting, and LED wall displays, the film seamlessly blends traditional Peking Opera aesthetics with cutting-edge digital imaging. Depicting the patriotic story of Liang Hongyu during the Song dynasty, the film preserves the authentic spirit of the original stage version while creating a visually dynamic cinematic experience. Lady of An Guo has been recognized at the Golden Rooster Awards for its pioneering contribution to the innovation of traditional performing arts through digital technology.</p>
+      <video controls style="width: 70%; height: auto; border-radius: 8px; display: block; margin: 20px auto;">
+        <source src="安国夫人.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header" onclick="toggleContent(this)">IN-BOX Immersive Theatre Project: Jing Haishan</div>
+    <div class="project-content">
+        <img src="11.png" alt="Image" style="width: 60%; border-radius: 8px; display: block; margin: 20px auto;">
+      
+       <p>Jing Haishan is an innovative immersive theatre production that creates a fully sensory, interactive experience within a technologically enhanced “IN-BOX” environment. Set in a 24m × 16m × 9m black box theatre at the Tao Xichuan Immersive Digital Performance Laboratory, the piece integrates live music, visual projections, installation art, aerial performance, and dance.
+        Using six ultra-bright 4K projectors controlled by real-time rendering engines, the space transforms dynamically in response to the performers’ movements. Equipped with surround-stage aerial rigging, actors traverse walls as if they were floors, performing gravity-defying choreography. Ultra-wideband tracking technology precisely monitors performers’ positions in three-dimensional space, seamlessly linking video, audio, and lighting systems to trigger real-time special effects. Jing Haishan exemplifies the future of interactive, multi-sensory theatre, dissolving the boundaries between performer and audience.</p>
+      <video controls style="width: 70%; height: auto; border-radius: 8px; display: block; margin: 20px auto;">
+        <source src="经海山.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header" onclick="toggleContent(this)">Research on Artistic Production Mechanisms in the Centenary</div>
+    <div class="project-content">
+      
+      <p>A major national social science project analyzing the evolution of China's artistic production systems over the past century.</p>
+     
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Graduate Student Projects</h2>
+  <div class="project">
+    <div class="project-header" onclick="toggleContent(this)">Digital Drama: Boundless</div>
+    <div class="project-content">
+      <div class="placeholder-img">Image Placeholder</div>
+      <p>A graduate course project using motion capture data to integrate traditional Peking Opera with contemporary digital technology.</p>
+      <div class="placeholder-img">Video Coming Soon...</div>
+    </div>
+  </div>
+</section>
+
+<section id="facilities">
+  <h2>Facilities</h2>
+  <ul>
+    <li>Motion Capture and Facial Capture Laboratories</li>
+    <li>Immersive Digital Performance Labs</li>
+    <li>Online Broadcasting Cloud Platform Laboratory</li>
+
+  </ul>
+  <img src="10.png" alt="facilities" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+      
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Department of Science Theatre, The Central Academy of Drama, Beijing</p>
+  <p>Email: (To be filled)</p>
+  <p>Website: <a href="https://chntheatre.edu.cn/cn/educationat/digidrama.html" target="_blank">Visit Here</a></p>
+</section>
+
+<footer>
+  © 2025 The Department of Science Theatre. All rights reserved.
+</footer>
+
+<script>
+function toggleContent(el){
+  const content = el.nextElementSibling;
+  content.classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
