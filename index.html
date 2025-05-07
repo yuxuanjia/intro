@@ -109,9 +109,39 @@
       border: none;
       border-radius: 8px;
     }
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .language-switch a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: white;
+      color: var(--blue);
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: 2px solid var(--blue);
+    }
+    .language-switch a:hover {
+      background: var(--blue);
+      color: white;
+    }
+    .language-switch .active {
+      background: var(--blue);
+      color: white;
+    }
   </style>
 </head>
 <body>
+
+<div class="language-switch">
+  <a href="/intro/" class="active">EN</a>
+  <a href="/intro/zh/">中文</a>
+</div>
 
 <header>
   <img src="/intro/2.JPG" alt="Science Theatre Logo">
