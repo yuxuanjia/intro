@@ -90,6 +90,25 @@
       height: auto;
       border-radius: 8px;
     }
+    .media-container {
+      width: 70%;
+      margin: 20px auto;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .media-container img,
+    .media-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+    .media-container iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -116,7 +135,7 @@
   <div class="about-container">
     <div class="about-text">
       <h2>About the Department</h2>
-      <p>The Department of Science Theatre was founded on June 6, 2023, as one of the fruitful results of a CAD’s project, Key Laboratory of Intelligent Dramatic Art Space, Ministry of Education. It centers around ‘digital drama’, the science-based sub-discipline initiated by the CAD. Building on the essence of theatre, it stresses interdisciplinary research and education. It has been established in the light of China’s strategic plan to develop cultural digitalization, with the aim to nurture interdisciplinary generalists that can integrate cultural technology with theatre, film and TV arts, and can live up to China’s strategic plans.</p>
+      <p>The Department of Science Theatre was founded on June 6, 2023, as one of the fruitful results of a CAD's project, Key Laboratory of Intelligent Dramatic Art Space, Ministry of Education. It centers around 'digital drama', the science-based sub-discipline initiated by the CAD. Building on the essence of theatre, it stresses interdisciplinary research and education. It has been established in the light of China's strategic plan to develop cultural digitalization, with the aim to nurture interdisciplinary generalists that can integrate cultural technology with theatre, film and TV arts, and can live up to China's strategic plans.</p>
 
       <p>The Department is responsible for the construction and operation of Key Laboratory of Intelligent Dramatic Art Space. It works with national and international experts for innovation, to carry out the major missions commissioned by the authorities at state, provincial, and industrial levels.</p>
 
@@ -164,13 +183,12 @@
   <div class="project">
     <div class="project-header" onclick="toggleContent(this)">Digital Mei Lanfang Project</div>
     <div class="project-content">
-      <img src="3.png" alt="Digital Mei Lanfang Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
-      <p>Jointly developed by The Central Academy of Drama and Beijing Institute of Technology, the “Digital Mei Lanfang” project pioneers a standardized approach to the digital recreation of historical figures. Through advanced real-time technologies, it faithfully reconstructs Mei Lanfang’s appearance, movement, voice, and performance, creating China’s first truly interactive “digital twin” of a Peking Opera master. The project sets a benchmark for the preservation and digital asset management of Chinese cultural figures.</p>
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 20px auto;">
-        <iframe src="https://player.bilibili.com/player.html?bvid=BV1Pq4y1c7bw&high_quality=1&danmaku=0" 
-          frameborder="0" allowfullscreen 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-        </iframe>
+      <div class="media-container">
+        <img src="3.png" alt="Digital Mei Lanfang Image">
+      </div>
+      <p>Jointly developed by The Central Academy of Drama and Beijing Institute of Technology, the "Digital Mei Lanfang" project pioneers a standardized approach to the digital recreation of historical figures. Through advanced real-time technologies, it faithfully reconstructs Mei Lanfang's appearance, movement, voice, and performance, creating China's first truly interactive "digital twin" of a Peking Opera master. The project sets a benchmark for the preservation and digital asset management of Chinese cultural figures.</p>
+      <div class="media-container">
+        <iframe src="https://player.bilibili.com/player.html?bvid=BV1Pq4y1c7bw&high_quality=1&danmaku=0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -178,48 +196,58 @@
   <div class="project">
     <div class="project-header" onclick="toggleContent(this)">Rescue and Digital Preservation of Endangered Traditional Theatre Techniques</div>
     <div class="project-content">
-      <img src="4.png" alt="Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
-      <p>The Central Academy of Drama has pioneered the integration of motion capture, facial capture, and machine learning technologies for the digital preservation and transmission of traditional Chinese theatre. By applying motion capture, generative adversarial networks, and interdisciplinary research methods, the project systematically collects and reconstructs the endangered techniques of Peking Opera, Kunqu Opera, and other forms. It extracts master-level stylistic features to build a “cultural genome” database of representative artists, supporting the development of intelligent, interactive learning systems and offering a human-machine collaborative solution for high-level heritage preservation.</p>
-      <img src="5.jpg" alt="Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
-       <p>Building on high-precision 3D body movement data capture and analysis, the project develops an interactive learning system designed for the transmission of traditional Chinese theatre arts. By enabling dynamic human–machine interaction, the system supports the preservation, teaching, and innovation of critical performance techniques, offering a new paradigm for the sustainable inheritance of traditional theatre at a high artistic level.</p>
+      <div class="media-container">
+        <img src="4.png" alt="Image">
+      </div>
+      <p>The Central Academy of Drama has pioneered the integration of motion capture, facial capture, and machine learning technologies for the digital preservation and transmission of traditional Chinese theatre. By applying motion capture, generative adversarial networks, and interdisciplinary research methods, the project systematically collects and reconstructs the endangered techniques of Peking Opera, Kunqu Opera, and other forms. It extracts master-level stylistic features to build a "cultural genome" database of representative artists, supporting the development of intelligent, interactive learning systems and offering a human-machine collaborative solution for high-level heritage preservation.</p>
+      <div class="media-container">
+        <img src="5.jpg" alt="Image">
+      </div>
+      <p>Building on high-precision 3D body movement data capture and analysis, the project develops an interactive learning system designed for the transmission of traditional Chinese theatre arts. By enabling dynamic human–machine interaction, the system supports the preservation, teaching, and innovation of critical performance techniques, offering a new paradigm for the sustainable inheritance of traditional theatre at a high artistic level.</p>
     </div>
   </div>
 
   <div class="project">
     <div class="project-header" onclick="toggleContent(this)">The Shape of Time – Peking Opera</div>
     <div class="project-content">
-        <img src="6.png" alt="Image" style="width: 50%; border-radius: 8px; display: block; margin: 20px auto;">
-        <p>“The Shape of Time – Peking Opera” explores the representation of time through dynamic imagery combined with motion capture data. Rather than simply visualizing the movement of renowned Peking Opera performers, the project materializes and solidifies the traces of performers’ gestures across the dimensions of time and space, creating dynamic “gesture-time sculptures” that embody both motion and texture.</p>
-        <img src="7.png" alt="Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
-        
-        <p>The work was unveiled during “China Night” at the 58th Venice Biennale in May 2019 and was also exhibited at the 2019 Asian Digital Art Exhibition, a supporting event of the Conference on Dialogue of Asian Civilizations. By innovatively digitizing traditional theatrical expression, it celebrates the richness of Chinese heritage and attracted significant media attention, with over 200,000 visitors both online and offline.</p>
-        <p>This project marks an important exploration of transforming traditional Peking Opera into the realm of visual and spatial art, integrating it into a global artistic language.</p>
-    <div class="placeholder-img">Video Coming Soon...</div>
+      <div class="media-container">
+        <img src="6.png" alt="Image">
+      </div>
+      <p>"The Shape of Time – Peking Opera" explores the representation of time through dynamic imagery combined with motion capture data. Rather than simply visualizing the movement of renowned Peking Opera performers, the project materializes and solidifies the traces of performers' gestures across the dimensions of time and space, creating dynamic "gesture-time sculptures" that embody both motion and texture.</p>
+      <div class="media-container">
+        <img src="7.png" alt="Image">
+      </div>
+      <p>The work was unveiled during "China Night" at the 58th Venice Biennale in May 2019 and was also exhibited at the 2019 Asian Digital Art Exhibition, a supporting event of the Conference on Dialogue of Asian Civilizations. By innovatively digitizing traditional theatrical expression, it celebrates the richness of Chinese heritage and attracted significant media attention, with over 200,000 visitors both online and offline.</p>
+      <p>This project marks an important exploration of transforming traditional Peking Opera into the realm of visual and spatial art, integrating it into a global artistic language.</p>
+      <div class="placeholder-img">Video Coming Soon...</div>
     </div>
   </div>
 
   <div class="project">
     <div class="project-header" onclick="toggleContent(this)">Rhyme of Ice and Snow</div>
     <div class="project-content">
-      <img src="8.png" alt="Rhyme of Ice and Snow Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+      <div class="media-container">
+        <img src="8.png" alt="Rhyme of Ice and Snow Image">
+      </div>
       <p>The project team provided the Data Sculpture digital art installation for the Beijing Winter Olympics. Rhyme of Ice and Snow (RIS) presents a transparent three-dimensional display space constructed with staggered LED screens. Leveraging 3DAT technology, it abstractly transforms the motion trajectories of winter athletes into dynamic visuals resembling Chinese ink painting and snow particles, creating a sculptural effect rich in movement and texture. Artificial intelligence technologies were further employed to sense audience presence, applause, and cheers, enabling real-time interaction between the dynamic imagery and the viewers. This work exemplifies an innovative convergence of sports data, traditional aesthetics, and interactive digital art.</p>
-      <video controls style="width: 70%; height: auto; border-radius: 8px; display: block; margin: 20px auto;">
-        <source src="冰雪之韵.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="media-container">
+        <video controls>
+          <source src="冰雪之韵.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 
   <div class="project">
     <div class="project-header" onclick="toggleContent(this)">Lady of An Guo</div>
     <div class="project-content">
-      <img src="9.png" alt="Lady of An Guo Image" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+      <div class="media-container">
+        <img src="9.png" alt="Lady of An Guo Image">
+      </div>
       <p>Lady of An Guo is the first Peking Opera film in China to be entirely produced using advanced LED virtual production technology. Integrating real-time rendering, spatial tracking, digital lighting, and LED wall displays, the film seamlessly blends traditional Peking Opera aesthetics with cutting-edge digital imaging. Depicting the patriotic story of Liang Hongyu during the Song dynasty, the film preserves the authentic spirit of the original stage version while creating a visually dynamic cinematic experience. Lady of An Guo has been recognized at the Golden Rooster Awards for its pioneering contribution to the innovation of traditional performing arts through digital technology.</p>
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 20px auto;">
-        <iframe src="https://player.bilibili.com/player.html?bvid=BV1kw41187WJ&high_quality=1&danmaku=0" 
-          frameborder="0" allowfullscreen 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-        </iframe>
+      <div class="media-container">
+        <iframe src="https://player.bilibili.com/player.html?bvid=BV1kw41187WJ&high_quality=1&danmaku=0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -227,14 +255,17 @@
   <div class="project">
     <div class="project-header" onclick="toggleContent(this)">IN-BOX Immersive Theatre Project: Jing Haishan</div>
     <div class="project-content">
-        <img src="11.png" alt="Image" style="width: 60%; border-radius: 8px; display: block; margin: 20px auto;">
-      
-       <p>Jing Haishan is an innovative immersive theatre production that creates a fully sensory, interactive experience within a technologically enhanced “IN-BOX” environment. Set in a 24m × 16m × 9m black box theatre at the Tao Xichuan Immersive Digital Performance Laboratory, the piece integrates live music, visual projections, installation art, aerial performance, and dance.
-        Using six ultra-bright 4K projectors controlled by real-time rendering engines, the space transforms dynamically in response to the performers’ movements. Equipped with surround-stage aerial rigging, actors traverse walls as if they were floors, performing gravity-defying choreography. Ultra-wideband tracking technology precisely monitors performers’ positions in three-dimensional space, seamlessly linking video, audio, and lighting systems to trigger real-time special effects. Jing Haishan exemplifies the future of interactive, multi-sensory theatre, dissolving the boundaries between performer and audience.</p>
-      <video controls style="width: 70%; height: auto; border-radius: 8px; display: block; margin: 20px auto;">
-        <source src="经海山.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="media-container">
+        <img src="11.png" alt="Image">
+      </div>
+      <p>Jing Haishan is an innovative immersive theatre production that creates a fully sensory, interactive experience within a technologically enhanced "IN-BOX" environment. Set in a 24m × 16m × 9m black box theatre at the Tao Xichuan Immersive Digital Performance Laboratory, the piece integrates live music, visual projections, installation art, aerial performance, and dance.
+      Using six ultra-bright 4K projectors controlled by real-time rendering engines, the space transforms dynamically in response to the performers' movements. Equipped with surround-stage aerial rigging, actors traverse walls as if they were floors, performing gravity-defying choreography. Ultra-wideband tracking technology precisely monitors performers' positions in three-dimensional space, seamlessly linking video, audio, and lighting systems to trigger real-time special effects. Jing Haishan exemplifies the future of interactive, multi-sensory theatre, dissolving the boundaries between performer and audience.</p>
+      <div class="media-container">
+        <video controls>
+          <source src="经海山.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 
@@ -268,14 +299,16 @@
     <li>Online Broadcasting Cloud Platform Laboratory</li>
 
   </ul>
-  <img src="10.png" alt="facilities" style="width: 70%; border-radius: 8px; display: block; margin: 20px auto;">
+  <div class="media-container">
+    <img src="10.png" alt="facilities">
+  </div>
       
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <p>Department of Science Theatre, The Central Academy of Drama, Beijing</p>
-  <p>Email: (To be filled)</p>
+  <p>Email: Yuxuanjia97@gmail.com</p>
   <p>Website: <a href="https://chntheatre.edu.cn/cn/educationat/digidrama.html" target="_blank">Visit Here</a></p>
 </section>
 
