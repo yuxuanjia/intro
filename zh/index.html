@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>科技戏剧系 - 简介</title>
+  <style>
+    :root { --blue: #002147; }
+    body {
+      font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5 url('/intro/texture.png') repeat;
+      background-size: 300px 300px;
+      color: #333;
+      line-height: 1.6;
+    }
+    header { background: var(--blue); color: white; padding: 10px 20px; display: flex; align-items: center; }
+    header img { height: 50px; margin-right: 20px; }
+    header div { text-align: left; }
+    header h1 { margin: 0; font-size: 1.8em; }
+    header p { margin: 5px 0 0; font-size: 1em; }
+    nav { background: #e0e0e0; padding: 10px 20px; text-align: center; }
+    nav a {
+      margin: 0 10px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      color: var(--blue);
+      border-bottom: 2px solid var(--blue);
+    }
+    section { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; }
+    h2 { color: var(--blue); margin-top: 0; }
+    .project { border: 1px solid #ccc; margin-bottom: 15px; border-radius: 8px; overflow: hidden; }
+    .project-header {
+      background: #f0f0f0;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .project-header:hover {
+      background: #e0e0e0;
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .project-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+      padding: 0 15px;
+    }
+    .project-content.show {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 15px;
+    }
+    .media-container {
+      width: 70%;
+      margin: 20px auto;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .media-container img,
+    .media-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+    .media-container iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+      border-radius: 8px;
+    }
+    .placeholder-img { width: 100%; height: 200px; background: #ccc; display: flex; align-items: center; justify-content: center; color: #555; margin-bottom: 10px; }
+    footer { text-align: center; padding: 20px; font-size: 0.8em; color: #666; margin-top: 20px; }
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .about-text {
+      flex: 1 1 60%;
+    }
+    .about-image {
+      flex: 1 1 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .language-switch a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: white;
+      color: var(--blue);
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: 2px solid var(--blue);
+    }
+    .language-switch a:hover {
+      background: var(--blue);
+      color: white;
+    }
+    .language-switch .active {
+      background: var(--blue);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="language-switch">
+  <a href="/intro/">EN</a>
+  <a href="/intro/zh/" class="active">中文</a>
+</div>
+
+<header>
+  <img src="/intro/2.JPG" alt="科技戏剧系标志">
+  <div>
+    <h1>科技戏剧系</h1>
+    <p>中央戏剧学院，中国北京</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">关于我们</a>
+  <a href="#lab">重点实验室</a>
+  <a href="#programs">培养方案</a>
+  <a href="#research">研究方向</a>
+  <a href="#projects">项目成果</a>
+  <a href="#facilities">设施设备</a>
+  <a href="#contact">联系方式</a>
+</nav>
+
+<section id="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>关于科技戏剧系</h2>
+      <p>科技戏剧系成立于2023年6月6日，是中央戏剧学院"智能戏剧艺术空间教育部重点实验室"建设的重要成果之一。以"数字戏剧"这一由中央戏剧学院首倡的科学子学科为核心，立足戏剧艺术本体，强调跨学科研究与教育。科技戏剧系的建设契合国家文化数字化发展战略，旨在培养能够将文化科技与戏剧影视艺术相结合，适应国家战略需求的复合型人才。</p>
+
+      <p>科技戏剧系承担智能戏剧艺术空间教育部重点实验室的建设与运行工作。与国内外专家合作创新，承担国家级、省部级和行业重大任务。</p>
+
+      <p>科技戏剧系管理北京高校青年拔尖人才培养计划资助的"中国传统戏曲数字化高等研究院"实体创新平台。</p>
+    </div>
+    <div class="about-image">
+      <img src="/intro/1.png" alt="系部概览图片">
+    </div>
+  </div>
+</section>
+
+[继续添加其他部分的中文内容...]
+
+<section id="contact">
+  <h2>联系方式</h2>
+  <p>科技戏剧系，中央戏剧学院，北京</p>
+  <p>邮箱：Yuxuanjia97@gmail.com</p>
+  <p>网站：<a href="https://chntheatre.edu.cn/cn/educationat/digidrama.html" target="_blank">访问</a></p>
+</section>
+
+<footer>
+  © 2025 科技戏剧系。保留所有权利。
+</footer>
+
+<script>
+function toggleContent(el){
+  const content = el.nextElementSibling;
+  content.classList.toggle('show');
+}
+</script>
+
+</body>
+</html> 
