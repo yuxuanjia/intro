@@ -213,11 +213,6 @@
 </head>
 <body>
 
-<div class="language-switch" id="languageSwitcher">
-  <a href="#" data-lang="en" class="lang-btn active">EN</a>
-  <a href="#" data-lang="zh" class="lang-btn">中文</a>
-</div>
-
 <header>
   <img src="2.JPG" alt="Science Theatre Logo">
   <div>
@@ -495,31 +490,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-</script>
-<script>
-  const langButtons = document.querySelectorAll('.lang-btn');
-  langButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const selectedLang = btn.dataset.lang;
-      langButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.body.classList.remove('lang-en', 'lang-zh');
-      document.body.classList.add(`lang-${selectedLang}`);
-      // Store preference
-      localStorage.setItem('preferredLang', selectedLang);
-      // Reload page or dynamically swap text content if multi-language implemented
-      location.href = selectedLang === 'en' ? '/intro/' : '/intro/zh/';
-    });
-  });
-
-  // Auto apply stored language on load
-  window.addEventListener('DOMContentLoaded', () => {
-    const preferred = localStorage.getItem('preferredLang');
-    if (preferred && preferred !== 'en') {
-      document.querySelector(`.lang-btn[data-lang="${preferred}"]`)?.click();
-    }
-  });
 </script>
 
 </body>
