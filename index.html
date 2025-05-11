@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="x5-video-player-type" content="h5">
+  <meta name="x5-video-player-fullscreen" content="true">
   <title>The Department of Science Theatre - Introduction</title>
   <style>
     :root { --blue: #002147; }
@@ -134,6 +140,21 @@
       background: var(--blue);
       color: white;
     }
+    .video-container {
+      position: relative;
+      width: 100%;
+      margin: 20px auto;
+    }
+    .video-loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -260,11 +281,21 @@
         <img src="/intro/8.png" alt="Rhyme of Ice and Snow Image">
       </div>
       <p>The project team provided the Data Sculpture digital art installation for the Beijing Winter Olympics. Rhyme of Ice and Snow (RIS) presents a transparent three-dimensional display space constructed with staggered LED screens. Leveraging 3DAT technology, it abstractly transforms the motion trajectories of winter athletes into dynamic visuals resembling Chinese ink painting and snow particles, creating a sculptural effect rich in movement and texture. Artificial intelligence technologies were further employed to sense audience presence, applause, and cheers, enabling real-time interaction between the dynamic imagery and the viewers. This work exemplifies an innovative convergence of sports data, traditional aesthetics, and interactive digital art.</p>
-      <div class="media-container">
-        <video controls preload="metadata" style="width: 100%; height: auto;">
-          <source src="/intro/冰雪之韵.mp4" type="video/mp4">
+      <div class="video-container">
+        <video 
+          controls 
+          preload="metadata" 
+          style="width: 100%; height: auto;"
+          playsinline
+          webkit-playsinline
+          x5-playsinline
+        >
+          <source src="/intro/冰雪之韵.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      </div>
+      <div class="video-loading" style="display: none;">
+        Loading video...
       </div>
     </div>
   </div>
@@ -293,6 +324,7 @@
       <div class="media-container">
         <video controls preload="metadata" style="width: 100%; height: auto;">
           <source src="/intro/经海山.mp4" type="video/mp4">
+          <source src="/intro/经海山.webm" type="video/webm">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -368,6 +400,47 @@ function toggleContent(el){
   const content = el.nextElementSibling;
   content.classList.toggle('show');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const videos = document.querySelectorAll('video');
+  videos.forEach(video => {
+    // 添加错误处理
+    video.addEventListener('error', function(e) {
+      console.log('Video error:', e);
+    });
+    
+    // 添加加载处理
+    video.addEventListener('loadeddata', function() {
+      console.log('Video loaded successfully');
+    });
+    
+    // 尝试预加载
+    video.load();
+  });
+
+  const videoContainers = document.querySelectorAll('.video-container');
+  
+  videoContainers.forEach(container => {
+    const video = container.querySelector('video');
+    const loading = container.querySelector('.video-loading');
+    
+    if (video && loading) {
+      loading.style.display = 'block';
+      
+      video.addEventListener('loadeddata', function() {
+        loading.style.display = 'none';
+      });
+      
+      video.addEventListener('error', function(e) {
+        console.log('Video error:', e);
+        loading.textContent = 'Error loading video. Please try again.';
+      });
+      
+      // 尝试加载视频
+      video.load();
+    }
+  });
+});
 </script>
 
 </body>
