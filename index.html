@@ -16,7 +16,7 @@
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5 url('texture.png') repeat;
+      background: #f5f5f5 url('/intro/texture.png') repeat;
       background-size: 300px 300px;
       color: #333;
       line-height: 1.6;
@@ -156,12 +156,66 @@
       border-radius: 4px;
     }
   </style>
+  <style>
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      header img {
+        margin: 0 0 10px 0;
+        height: 40px;
+      }
+
+      .about-container {
+        flex-direction: column;
+      }
+
+      .about-text, .about-image {
+        flex: 1 1 100%;
+      }
+
+      .media-container {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 0.9em;
+        padding: 6px 12px;
+      }
+
+      .language-switch {
+        position: static;
+        text-align: right;
+        padding: 10px;
+      }
+
+      .project-header {
+        font-size: 1em;
+        padding: 8px;
+      }
+
+      .project-content {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="language-switch">
-  <a href="/intro/" class="active">EN</a>
-  <a href="/intro/zh/">中文</a>
+<div class="language-switch" id="languageSwitcher">
+  <a href="#" data-lang="en" class="lang-btn active">EN</a>
+  <a href="#" data-lang="zh" class="lang-btn">中文</a>
 </div>
 
 <header>
@@ -441,6 +495,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+</script>
+<script>
+  const langButtons = document.querySelectorAll('.lang-btn');
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const selectedLang = btn.dataset.lang;
+      langButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.body.classList.remove('lang-en', 'lang-zh');
+      document.body.classList.add(`lang-${selectedLang}`);
+      // Store preference
+      localStorage.setItem('preferredLang', selectedLang);
+      // Reload page or dynamically swap text content if multi-language implemented
+      location.href = selectedLang === 'en' ? '/intro/' : '/intro/zh/';
+    });
+  });
+
+  // Auto apply stored language on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const preferred = localStorage.getItem('preferredLang');
+    if (preferred && preferred !== 'en') {
+      document.querySelector(`.lang-btn[data-lang="${preferred}"]`)?.click();
+    }
+  });
 </script>
 
 </body>
